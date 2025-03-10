@@ -18,7 +18,7 @@ export function Header() {
           <FiShoppingCart size={24} color="#121212" />
           {cartAmount > 0 && (
             <span className="absolute -right-3 -top-3 px-2.5 bg-sky-500 rounded-full w-6 h-6 flex justify-center items-center text-white text-xs">
-            2
+           {cartAmount}
           </span>
           )}
         </Link>
@@ -26,3 +26,4 @@ export function Header() {
     </header>
   );
 }
+
