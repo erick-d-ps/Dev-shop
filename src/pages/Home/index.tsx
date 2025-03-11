@@ -1,6 +1,7 @@
 import { useState, useEffect, useContext } from 'react';
 import { BsCartPlus } from 'react-icons/bs'
 import { CartContex } from '../../contexts'
+import { Link } from 'react-router-dom';
 
 import { api } from "../../services/api"
 import toast from 'react-hot-toast'
@@ -41,11 +42,13 @@ export function Home() {
         <div className='grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-5'>
          {products.map((item) => (
            <section key={item.id} className="w-full">
+            <Link to="/description/id">
            <img
            className="w-full rounded-lg max-h-70 mb-2"
-             src={item.cover}
-             alt={item.title}
+           src={item.cover}
+           alt={item.title}
            />
+           </Link>
            <p className="font-medium mt-1 mb-2">{item.title}</p>
            <div className='flex gap-3 items-center'>
              <strong className='text-zinc-700/90'>
