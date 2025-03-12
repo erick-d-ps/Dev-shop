@@ -42,14 +42,14 @@ export function Home() {
         <div className='grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-5'>
          {products.map((item) => (
            <section key={item.id} className="w-full">
-            <Link to="/description/id">
+            <Link to={`/description/${item.id}`}>
            <img
            className="w-full rounded-lg max-h-70 mb-2"
            src={item.cover}
            alt={item.title}
            />
-           </Link>
            <p className="font-medium mt-1 mb-2">{item.title}</p>
+           </Link>
            <div className='flex gap-3 items-center'>
              <strong className='text-zinc-700/90'>
              {item.price.toLocaleString("pt-Br",{

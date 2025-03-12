@@ -1,54 +1,65 @@
-# React + TypeScript + Vite
+# DevLink
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+DevLink é uma plataforma inspirada no Linktree que permite aos usuários criar e gerenciar uma página personalizada com links para suas redes sociais e outros conteúdos relevantes. Agora, com nossa mais recente atualização, qualquer usuário pode criar sua própria conta e exibir seus links personalizados para o mundo!
 
-Currently, two official plugins are available:
+## Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Cadastro de links personalizados
+- Integração com redes sociais
+- Interface responsiva e amigável
+- Autenticação de usuários
+- Criação de conta para qualquer usuário
+- Exibição pública de links personalizados
 
-## Expanding the ESLint configuration
+## Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Frontend: React com TypeScript (Vite)
+- Estilização: Tailwind CSS
+- Roteamento: React Router DOM
+- Notificações: React Toastify
+- Backend: Firebase
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Configuração
+
+O projeto utiliza variáveis de ambiente para configuração. Certifique-se de configurar as seguintes variáveis:
+
+```bash
+VITE_API_KEY=sua_api_key
+VITE_AUTH_DOMAIN=seu_auth_domain
+VITE_PROJECT_ID=seu_project_id
+VITE_STORAGE_BUCKET=seu_storage_bucket
+VITE_MESSAGING_SENDER_ID=seu_messaging_sender_id
+VITE_APP_ID=seu_app_id
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Instalação e Execução
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/devlink.git
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+# Entre no diretório do projeto
+cd devlink
+
+# Instale as dependências
+npm install
+
+# Execute o projeto
+npm run dev
 ```
+
+## Como Usar
+
+1. Crie sua conta na plataforma DevLink
+2. Faça login com suas credenciais
+3. Adicione seus links personalizados
+4. Personalize sua página conforme desejado
+5. Compartilhe sua página DevLink com o mundo!
+
+## Autor
+
+Leonardo Nunes Martinha
+
+## Contato
+
+Para mais informações, entre em contato através do email: [leonardomartinha.dev@gmail.com](mailto:leonardomartinha.dev@gmail.com)
